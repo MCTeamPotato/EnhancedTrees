@@ -17,6 +17,7 @@
     "IntegerPropertyAccessor",
     "LeavesBlockMixin",
     "TreeFeatureMixin",
-    "TrunkPlacerMixin"
+    "TrunkPlacerMixin",
+    "UniformIntAccessor"
   ]
 }

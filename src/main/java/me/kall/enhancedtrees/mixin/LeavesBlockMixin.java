@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(LeavesBlock.class)
 public abstract class LeavesBlockMixin {
-    @ModifyConstant(method = {"decaying", "isRandomlyTicking", "<init>"}, constant = @Constant(intValue = 7))
+    @ModifyConstant(method = {"randomTick", "isRandomlyTicking", "<init>"}, constant = @Constant(intValue = 7))
     private int enhancedTrees$decaying(int constant) {
         return (int) (constant * TreeBonusConfig.FOLIAGE_DECAY_RANGE_BONUS);
     }

@@ -4,7 +4,7 @@ import me.kall.duplicationless.config.JsonConfig;
 
 public class TreeBonusConfig {
     private static final JsonConfig CONFIG = JsonConfig.create(EnhancedTrees.MOD_ID, "1")
-            .put("TrunkBonus", 2.00)
+            .put("TrunkBonus", 1.50)
             .put("FoliageHorizontalBonus", 1.50)
             .put("FoliageVerticalBonus", 1.50)
             .put("FoliageDecayRangeBonus", 1.50)

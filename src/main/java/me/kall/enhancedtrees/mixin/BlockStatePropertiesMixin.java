@@ -1,5 +1,6 @@
 package me.kall.enhancedtrees.mixin;
 
+import com.google.common.collect.ImmutableSet;
 import me.kall.enhancedtrees.EnhancedTrees;
 import me.kall.enhancedtrees.TreeBonusConfig;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -18,9 +19,17 @@ public abstract class BlockStatePropertiesMixin {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void enhancedTrees$init(CallbackInfo ci) {
-        int oldMax = ((IntegerPropertyAccessor) DISTANCE).max();
-        int newMax = (int) (TreeBonusConfig.FOLIAGE_DECAY_RANGE_BONUS * (double) oldMax);
-        DISTANCE = IntegerProperty.create("distance", ((IntegerPropertyAccessor) DISTANCE).min(), newMax);
-        EnhancedTrees.LOGGER.info("Max value of BlockStateProperties DISTANCE is updated from {} to {}", oldMax, newMax);
+        ImmutableSet<Integer> values = ((IntegerPropertyAccessor) DISTANCE).values();
+        int one = values.iterator().next();
+        int min = one;
+        int max = one;
+        for (int value : values) {
+            if (min > value) min = value;
+            if (max < value) max = value;
+        }
+
+        int newMax = (int) (TreeBonusConfig.FOLIAGE_DECAY_RANGE_BONUS * (double) max);
+        DISTANCE = IntegerProperty.create("distance", min, newMax);
+        EnhancedTrees.LOGGER.info("Max value of BlockStateProperties DISTANCE is updated from {} to {}", max, newMax);
     }
 }
