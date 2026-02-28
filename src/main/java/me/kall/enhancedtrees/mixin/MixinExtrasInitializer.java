@@ -1,7 +1,7 @@
 package me.kall.enhancedtrees.mixin;
 
 import com.llamalad7.mixinextras.MixinExtrasBootstrap;
-import net.minecraftforge.fml.loading.LoadingModList;
+import net.neoforged.fml.loading.LoadingModList;
 import org.jetbrains.annotations.NotNull;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;

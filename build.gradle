@@ -90,7 +90,7 @@ dependencies {
 
     modImplementation("curse.maven:duplicationless-1380105:${versionInfo.duplicationless}")
 
-    modImplementation("curse.maven:accelerated-decay-699872:4863307")
+    modImplementation("curse.maven:accelerated-decay-699872:5433036")
 }
 
 processResources {
