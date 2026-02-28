@@ -89,6 +89,8 @@ dependencies {
     if (!isNeo) shadow(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixinextras_version}"))
 
     modImplementation("curse.maven:duplicationless-1380105:${versionInfo.duplicationless}")
+
+    modImplementation("curse.maven:accelerated-decay-699872:4863307")
 }
 
 processResources {
