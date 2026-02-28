@@ -1,6 +1,7 @@
 {
   "required": true,
   "package": "me.kall.enhancedtrees.mixin",
+  "plugin": "me.kall.enhancedtrees.mixin.MixinExtrasInitializer",
   "compatibilityLevel": "JAVA_8",
   "overwrites": {
     "conformVisibility": false
@@ -10,7 +11,10 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "BlockStatePropertiesMixin",
     "FoliagePlacerMixin",
+    "LeavesBlockMixin",
+    "TreeFeatureMixin",
     "TrunkPlacerMixin"
   ]
 }

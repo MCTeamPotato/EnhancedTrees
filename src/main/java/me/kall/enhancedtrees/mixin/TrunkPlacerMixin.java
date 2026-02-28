@@ -1,6 +1,6 @@
 package me.kall.enhancedtrees.mixin;
 
-import me.kall.enhancedtrees.EnhancedTrees;
+import me.kall.enhancedtrees.TreeBonusConfig;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,9 +18,9 @@ public abstract class TrunkPlacerMixin {
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void enhancedTrees$init(int baseHeight, int heightRandA, int heightRandB, CallbackInfo ci) {
-        baseHeight = (int) (baseHeight * EnhancedTrees.TRUNK_BONUS);
-        heightRandA = (int) (heightRandA * EnhancedTrees.TRUNK_BONUS);
-        heightRandB = (int) (heightRandB * EnhancedTrees.TRUNK_BONUS);
+        baseHeight = (int) (baseHeight * TreeBonusConfig.TRUNK_BONUS);
+        heightRandA = (int) (heightRandA * TreeBonusConfig.TRUNK_BONUS);
+        heightRandB = (int) (heightRandB * TreeBonusConfig.TRUNK_BONUS);
         if (baseHeight > 32) baseHeight = 32;
         if (heightRandA > 24) heightRandA = 24;
         if (heightRandB > 24) heightRandB = 24;

@@ -16,6 +16,7 @@ configurations {
 
 shadowJar {
     configurations = [project.configurations.shadow]
+    if (!isNeo) relocate "com.llamalad7.mixinextras", "me.kall.${archives_name}.mixinextras"
     mergeServiceFiles()
     archiveClassifier = "dev-shadow"
     exclude "LICENSE_MixinExtras"
@@ -84,6 +85,8 @@ dependencies {
     } else {
         forge "net.minecraftforge:forge:${project.minecraft_version}-${versionInfo.forge}"
     }
+
+    if (!isNeo) shadow(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixinextras_version}"))
 
     modImplementation("curse.maven:duplicationless-1380105:${versionInfo.duplicationless}")
 }
