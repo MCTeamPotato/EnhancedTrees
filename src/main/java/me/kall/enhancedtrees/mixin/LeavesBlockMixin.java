@@ -8,13 +8,13 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(LeavesBlock.class)
 public abstract class LeavesBlockMixin {
-    @ModifyConstant(method = "decaying", constant = @Constant(intValue = 7))
-    private int decaying(int constant) {
+    @ModifyConstant(method = {"decaying", "isRandomlyTicking", "<init>"}, constant = @Constant(intValue = 7))
+    private int enhancedTrees$decaying(int constant) {
         return (int) (constant * TreeBonusConfig.FOLIAGE_DECAY_RANGE_BONUS);
     }
 
-    @ModifyConstant(method = {"updateDistance", "getDistanceAt"}, constant = @Constant(intValue = 7))
-    private static int updateDistance(int constant) {
+    @ModifyConstant(method = {"updateDistance", "getDistanceAt", "<clinit>"}, constant = @Constant(intValue = 7))
+    private static int enhancedTrees$updateDistance(int constant) {
         return (int) (constant * TreeBonusConfig.FOLIAGE_DECAY_RANGE_BONUS);
     }
 }

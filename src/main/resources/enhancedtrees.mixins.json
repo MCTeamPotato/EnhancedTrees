@@ -14,6 +14,7 @@
     "AcceleratedDecayMixin",
     "BlockStatePropertiesMixin",
     "FoliagePlacerMixin",
+    "IntegerPropertyAccessor",
     "LeavesBlockMixin",
     "TreeFeatureMixin",
     "TrunkPlacerMixin"
