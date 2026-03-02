@@ -1,4 +1,4 @@
-package me.kall.enhancedtrees.mixin;
+package me.kall.enhancedtrees.mixin.decay;
 
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
