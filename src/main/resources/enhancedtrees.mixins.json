@@ -15,6 +15,7 @@
     "LeavesBlockMixin",
     "TreeFeatureMixin",
     "TrunkPlacerMixin",
+    "UniformIntAccessor",
     "compat.AcceleratedDecayMixin",
     "decay.BlockStatePropertiesMixin",
     "decay.IntegerPropertyAccessor",
