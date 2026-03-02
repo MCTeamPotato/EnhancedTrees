@@ -15,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BlockStateProperties.class)
 public abstract class BlockStatePropertiesMixin {
     @Mutable @Shadow @Final public static IntegerProperty DISTANCE;
+    @Mutable @Shadow @Final public static int MAX_DISTANCE;
 
     @SuppressWarnings("DataFlowIssue")
     @Inject(method = "<clinit>", at = @At("TAIL"))
@@ -22,6 +23,7 @@ public abstract class BlockStatePropertiesMixin {
         int oldMax = ((IntegerPropertyAccessor) (Object) DISTANCE).max();
         int newMax = (int) (TreeBonusConfig.FOLIAGE_DECAY_RANGE_BONUS * (double) oldMax);
         DISTANCE = IntegerProperty.create("distance", ((IntegerPropertyAccessor)(Object) DISTANCE).min(), newMax);
+        MAX_DISTANCE = newMax;
         EnhancedTrees.LOGGER.info("Max value of BlockStateProperties DISTANCE is updated from {} to {}", oldMax, newMax);
     }
 }
