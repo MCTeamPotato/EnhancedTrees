@@ -11,12 +11,13 @@
     "defaultRequire": 1
   },
   "mixins": [
-    "AcceleratedDecayMixin",
-    "BlockStatePropertiesMixin",
     "FoliagePlacerMixin",
-    "IntegerPropertyAccessor",
     "LeavesBlockMixin",
     "TreeFeatureMixin",
-    "TrunkPlacerMixin"
+    "TrunkPlacerMixin",
+    "compat.AcceleratedDecayMixin",
+    "decay.BlockStatePropertiesMixin",
+    "decay.IntegerPropertyAccessor",
+    "decay.LeavesBlockMixin"
   ]
 }

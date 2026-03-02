@@ -1,4 +1,4 @@
-package me.kall.enhancedtrees.mixin;
+package me.kall.enhancedtrees.mixin.decay;
 
 import me.kall.enhancedtrees.EnhancedTrees;
 import me.kall.enhancedtrees.TreeBonusConfig;

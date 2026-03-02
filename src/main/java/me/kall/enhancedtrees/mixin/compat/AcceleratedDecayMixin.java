@@ -1,4 +1,4 @@
-package me.kall.enhancedtrees.mixin;
+package me.kall.enhancedtrees.mixin.compat;
 
 import me.kall.enhancedtrees.TreeBonusConfig;
 import org.spongepowered.asm.mixin.Mixin;
